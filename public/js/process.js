@@ -1,20 +1,19 @@
 /* process.js */
-var user = document.getElementById("user");
-var pass = document.getElementById("pass");
-var submit = document.getElementById("submit");
-var form = document.getElementById("form");
 
-var mydata = JSON.parse(data);
-console.log(mydata[0]);
-//alert("hola");
-//alert(mydata[0].age);
-
-
-/* VALIDATE */
+/* FORM VALIDATE */
 function validate() {
-  if (form.user.value == "Fede" && form.pass.value == "flemita1") {
-    window.location.href = "home.html";
-  } else {
-    alert("Data incorrecta!");
-  }
+    var user = document.forms["form"]["user"].value;
+    var pass = document.forms["form"]["pass"].value;
+    $.getJSON('../data.json', function(data) {
+      if (user == null || user == "") {
+          alert("Name must be filled out");
+          return false;
+      } else {
+        if(user == data.user && pass == data.pass) {
+          window.location.href = "http://google.com.ar";
+        } else {
+          alert("Incorrect data!");
+        }
+      }
+    });
 }
