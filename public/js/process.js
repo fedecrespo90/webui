@@ -10,10 +10,19 @@ function validate() {
           return false;
       } else {
         if(user == data.user && pass == data.pass) {
-          window.location.href = "http://google.com.ar";
+          /* User logged in */
+          document.getElementById("login-panel").style.display = "none";
+          //window.location.href = "http://google.com.ar";
         } else {
           alert("Incorrect data!");
         }
       }
     });
 }
+
+/* Catch ENTER key */
+$( 'form' ).bind('keypress', function(e){
+  if ( e.keyCode == 13 ) {
+    validate();
+  }
+});

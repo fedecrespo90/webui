@@ -2,3 +2,15 @@
 * {
   margin:10px;
 }
+
+body {
+  background-image: url(../img/bg.gif);
+}
+
+.login-panel {
+  margin: 0 auto;
+  width: 300px;
+  border: solid 1px rgba(0,0,0,.2);
+  background-color: rgba(255,255,255,.6)
+
+}
