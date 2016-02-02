@@ -1,6 +1,9 @@
 /* process.js */
 
-/* FORM VALIDATE */
+/* Load default route */
+route();
+
+/* Form Validate */
 function validate() {
     var user = document.forms["form"]["user"].value;
     var pass = document.forms["form"]["pass"].value;
@@ -10,14 +13,30 @@ function validate() {
           return false;
       } else {
         if(user == data.user && pass == data.pass) {
-          /* User logged in */
-          document.getElementById("login-panel").style.display = "none";
-          //window.location.href = "http://google.com.ar";
+          route('home');
         } else {
           alert("Incorrect data!");
         }
       }
     });
+}
+
+/* Routes */
+function route(route) {
+  switch (route) {
+    case 'home':
+      section("Welcome!","login-panel","home");
+      break;
+    default:
+      section("Login!","home","login-panel");
+  }
+}
+
+/* Section */
+function section(title,hide,show) {
+  document.getElementById(hide).style.display = "none";
+  document.getElementById(show).style.display = "block";
+  document.title = title;
 }
 
 /* Catch ENTER key */
