@@ -5,22 +5,10 @@
 logout = function() {
    localStorage.removeItem("username");
    localStorage.removeItem("password");
+   localStorage.removeItem("img");
+   localStorage.removeItem("apellido");
    window.location.reload();
  }
-
-var laListaDeComics = $.getJSON('../models/comic.json', function(comics){});
-// createComic = function(id, url, padre) {
-//    var img = $('<img>');
-//    img.attr('id', id);
-//    img.attr('src', url );
-//    img.appendTo(padre);
-//    $("#img").mouseover(function(){
-//      showDom('panel-single');
-//    });
-//    $("#img").mouseout(function(){
-//      hideDom('panel-single');
-//    });
-// }
 
 comicHover = function(fieldSelector, panelSingle) {
   $(fieldSelector).mouseover(function(){

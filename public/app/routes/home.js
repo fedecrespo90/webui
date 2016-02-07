@@ -47,19 +47,14 @@ sortAsc = function(property) {
   }
 
 loadComics = function () {
-
   $.getJSON('../models/comic.json', function(comics) {
-
-    var sidebar = '<div class="col-lg-3 right"><aside><div class="panel panel-primary myPanel"><div class="panel-footer"><div class="form-group"><input class="form-control" type="text" name="search" placeholder="Search!"></div></div><div class="panel-footer"><button class="btn btn-primary" id ="opcionUno">Order A-Z</button><button class="btn btn-primary" id ="opcionDos">Order Z-A</button></div><div class="panel-footer"><p class="cara">:D</p></div></div></aside></div>';
-
+    var sidebar = '<div class="col-lg-3 right"><aside><div class="panel panel-primary myPanel"><div class="panel-footer"><div class="form-group"><input class="form-control" type="text" name="search" placeholder="Search!"></div></div><div class="panel-footer"><button class="btn btn-primary" id ="opcionUno">Order A-Z</button><button class="btn btn-primary" id ="opcionDos">Order Z-A</button></div><div class="panel-footer"><button class="btn btn-primary" id ="opcionTres">Order by rate descending</button><button class="btn btn-primary" id ="opcionCuatro">Order by rate ascending</button></div><div class="panel-footer"><p class="cara">:D</p></div></div></aside></div>';
     //Indices
     var i = 0;
-
     // create mainRow
     $('#home').append('<div class="row" id="mainRow"></div>');
     $('#mainRow').append('<div class="col-lg-9" id="comicListContainer"></div>');
     $('#mainRow').append(sidebar);
-
     // create comicList
     comics.comic.forEach(function(c){
       $('#comicListContainer').append('<div class="col-lg-4 comicIndividual" id="comic'+i+'"></div>')
@@ -75,8 +70,13 @@ loadComics = function () {
     $('#opcionDos').click(function(){
       reimprimir(comics.comic.sort(sortDesc('title')));
     });
+    $('#opcionTres').click(function(){
+      reimprimir(comics.comic.sort(sortDesc('rating')));
+    });
+    $('#opcionCuatro').click(function(){
+      reimprimir(comics.comic.sort(sortAsc('rating')));
+    });
    });
-
  }
 
 reimprimir = function(arr) {
