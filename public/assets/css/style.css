@@ -63,8 +63,13 @@ img {
 }
 
 .perfil {
-  width:50%;
-  height: 50%;
+  width: 25%;
+  height: 25%;
+  display: block;
+  margin: 20px auto;
+}
+.user-profile-info-container {
+  text-align: center;
 }
 
 .myPanel {
@@ -79,4 +84,9 @@ img {
   margin-right: 10px;
   margin-bottom: 10px;
   display: block;
+  text-align: left;
+}
+
+.btn {
+  font-size: 12px;
 }
