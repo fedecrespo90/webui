@@ -1,6 +1,6 @@
 {
   "user" : [
-    {"name" : "Fede", "pass" : "contrasena"},
-    {"name" : "Luca", "pass" : "password"}
+    {"name" : "Fede", "apellido":"Crespo", "pass" : "contrasena", "img":"perfil.jpg"},
+    {"name" : "Luca", "apellido":"Sartori", "pass" : "password", "img":"perfil1.jpg"}
   ]
 }

@@ -12,6 +12,8 @@ profile = function() {
           flag = true;
           userMsg('helloUser','Hello ',localStorage.username,'!');
           userMsg('nameUser','Username: <strong>',localStorage.username,'</strong>.');
+          userMsg('apellido','Apellido: <strong>',localStorage.apellido,'</strong>');
+          $('#userImg').attr("src",'../../assets/img/'+localStorage.img);
         }
       }
     });

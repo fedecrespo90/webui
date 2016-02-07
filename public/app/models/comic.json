@@ -1,16 +1,16 @@
 {
   "comic":[
-    {"title":"DEADPOOL & THE MERCS", "price":"5.00", "img":"comic0.jpg"},
-    {"title":"GUARDIANS OF INFINITY", "price":"5.00", "img":"comic1.jpg"},
-    {"title":"OBI-WAN AND ANAKIN", "price":"5.00", "img":"comic2.jpg"},
-    {"title":"VISION", "price":"5.00", "img":"comic3.jpg"},
-    {"title":"SPIDEY", "price":"5.00", "img":"comic4.jpg"},
-    {"title":"SCARLET WITCH", "price":"5.00", "img":"comic5.jpg"},
-    {"title":"NOVA", "price":"5.00", "img":"comic6.jpg"},
-    {"title":"CAPTAIN MARVEL", "price":"5.00", "img":"comic7.jpg"},
-    {"title":"CAPTAIN AMERICA: SAM WILSON", "price":"5.00", "img":"comic8.jpg"},
-    {"title":"UNCANNY X-MEN", "price":"5.00", "img":"comic9.jpg"},
-    {"title":"UNCANNY AVENGERS", "price":"5.00", "img":"comic10.jpg"},
-    {"title":"A-FORCE", "price":"5.00", "img":"comic11.jpg"}
+    {"title":"DEADPOOL & THE MERCS", "rating":"1", "price":"5.00", "img":"comic0.jpg"},
+    {"title":"GUARDIANS OF INFINITY", "rating":"3", "price":"5.00", "img":"comic1.jpg"},
+    {"title":"OBI-WAN AND ANAKIN", "rating":"1", "price":"5.00", "img":"comic2.jpg"},
+    {"title":"VISION", "rating":"4", "price":"5.00", "img":"comic3.jpg"},
+    {"title":"SPIDEY", "rating":"1", "price":"5.00", "img":"comic4.jpg"},
+    {"title":"SCARLET WITCH", "rating":"3", "price":"5.00", "img":"comic5.jpg"},
+    {"title":"NOVA", "rating":"4", "price":"5.00", "img":"comic6.jpg"},
+    {"title":"CAPTAIN MARVEL", "rating":"2", "price":"5.00", "img":"comic7.jpg"},
+    {"title":"CAPTAIN AMERICA: SAM WILSON", "rating":"4", "price":"5.00", "img":"comic8.jpg"},
+    {"title":"UNCANNY X-MEN", "rating":"5", "price":"5.00", "img":"comic9.jpg"},
+    {"title":"UNCANNY AVENGERS", "rating":"3", "price":"5.00", "img":"comic10.jpg"},
+    {"title":"A-FORCE", "rating":"2", "price":"5.00", "img":"comic11.jpg"}
   ]
 }

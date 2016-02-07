@@ -18,6 +18,8 @@ validate = function () {
               //Logged in
               localStorage.setItem('username',u.name);
               localStorage.setItem('password',u.pass);
+              localStorage.setItem('img',u.img);
+              localStorage.setItem('apellido',u.apellido);
               window.location.href = 'app/views/home.html';
               flag = true;
             }
