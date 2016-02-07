@@ -20,7 +20,7 @@ home = function () {
   });
 }
 
-sortByProperty = function(property) {
+sortAsc = function(property) {
      return function (a, b) {
          var sortStatus = 0;
          if (a[property] < b[property]) {
@@ -33,11 +33,24 @@ sortByProperty = function(property) {
      };
  }
 
+ sortDesc = function(property) {
+      return function (b, a) {
+          var sortStatus = 0;
+          if (a[property] < b[property]) {
+              sortStatus = -1;
+          } else if (a[property] > b[property]) {
+              sortStatus = 1;
+          }
+
+          return sortStatus;
+      };
+  }
+
 loadComics = function () {
 
   $.getJSON('../models/comic.json', function(comics) {
 
-    var sidebar = '<div class="col-lg-3 right"><aside><div class="panel panel-primary myPanel"><div class="panel-footer"><div class="form-group"><input class="form-control" type="text" name="search" placeholder="Search!"></div></div><div class="panel-footer"><div class="form-group"><button id ="opcionUno">BOTONAZO</button></div></div><div class="panel-footer"><p class="cara">:D</p></div></div></aside></div>';
+    var sidebar = '<div class="col-lg-3 right"><aside><div class="panel panel-primary myPanel"><div class="panel-footer"><div class="form-group"><input class="form-control" type="text" name="search" placeholder="Search!"></div></div><div class="panel-footer"><button class="btn btn-primary" id ="opcionUno">Order A-Z</button><button class="btn btn-primary" id ="opcionDos">Order Z-A</button></div><div class="panel-footer"><p class="cara">:D</p></div></div></aside></div>';
 
     //Indices
     var i = 0;
@@ -47,21 +60,20 @@ loadComics = function () {
     $('#mainRow').append('<div class="col-lg-9" id="comicListContainer"></div>');
     $('#mainRow').append(sidebar);
 
-    //var ejemplo = ['hola','flor','otro','carlos'];
-    //Usage
-    //console.log(comics.comic.sort());
-
     // create comicList
     comics.comic.forEach(function(c){
       $('#comicListContainer').append('<div class="col-lg-4 comicIndividual" id="comic'+i+'"></div>')
-      $('#comic'+i).append('<img src="../../assets/img/comic.jpg" id="comicImg'+i+'" class="comic-img">');
+      $('#comic'+i).append('<img src="../../assets/img/'+c.img+'" id="comicImg'+i+'" class="comic-img">');
       var panel = '<div id="panelSingle'+i+'" class="panel panel-body panel-single"><h1 class="panel-title">'+c.title+'</h1><h3 class="panel-price">'+'$'+c.price+'</h3></div>';
       $('#comic'+i).append(panel);
       comicHover('#comicImg'+i, 'panelSingle'+i);
       i++;
     });
     $('#opcionUno').click(function(){
-      reimprimir(comics.comic.sort(sortByProperty('title')));
+      reimprimir(comics.comic.sort(sortAsc('title')));
+    });
+    $('#opcionDos').click(function(){
+      reimprimir(comics.comic.sort(sortDesc('title')));
     });
    });
 
@@ -71,7 +83,7 @@ reimprimir = function(arr) {
   $('#comicListContainer').empty();
   for (var i = 0; i < arr.length; i++) {
     $('#comicListContainer').append('<div class="col-lg-4 comicIndividual" id="comic'+i+'"></div>')
-    $('#comic'+i).append('<img src="../../assets/img/comic.jpg" id="comicImg'+i+'" class="comic-img">');
+    $('#comic'+i).append('<img src="../../assets/img/'+arr[i].img+'" id="comicImg'+i+'" class="comic-img">');
     var panel = '<div id="panelSingle'+i+'" class="panel panel-body panel-single"><h1 class="panel-title">'+arr[i].title+'</h1><h3 class="panel-price">'+'$'+arr[i].price+'</h3></div>';
     $('#comic'+i).append(panel);
     comicHover('#comicImg'+i, 'panelSingle'+i);

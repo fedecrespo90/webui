@@ -30,11 +30,11 @@ nav {
 }
 
 .comicIndividual .panel-title {
-  font-size: 1.5em;
+  font-size: 1.2em;
 }
 
 .comicIndividual .panel-price {
-  font-size: 1.2em;
+  font-size: 1em;
 }
 
 .panel-single {
@@ -58,10 +58,6 @@ img {
   margin-bottom: 15px;
 }
 
-img:hover {
-  cursor: pointer;
-}
-
 .right {
   float: right;
 }
@@ -77,4 +73,8 @@ img:hover {
 
 .cara {
   color:rgba(0,0,0,.2);
+}
+
+.btn-primary {
+  margin-right: 10px;
 }

@@ -1,16 +1,16 @@
 {
   "comic":[
-    {"title":"a", "price":"5.00"},
-    {"title":"b", "price":"5.00"},
-    {"title":"domic3", "price":"5.00"},
-    {"title":"eomic4", "price":"5.00"},
-    {"title":"xomic5", "price":"5.00"},
-    {"title":"romic6", "price":"5.00"},
-    {"title":"comic7", "price":"5.00"},
-    {"title":"comic8", "price":"5.00"},
-    {"title":"comic9", "price":"5.00"},
-    {"title":"comic10", "price":"5.00"},
-    {"title":"comic11", "price":"5.00"},
-    {"title":"comic12", "price":"5.00"}
+    {"title":"DEADPOOL & THE MERCS", "price":"5.00", "img":"comic0.jpg"},
+    {"title":"GUARDIANS OF INFINITY", "price":"5.00", "img":"comic1.jpg"},
+    {"title":"OBI-WAN AND ANAKIN", "price":"5.00", "img":"comic2.jpg"},
+    {"title":"VISION", "price":"5.00", "img":"comic3.jpg"},
+    {"title":"SPIDEY", "price":"5.00", "img":"comic4.jpg"},
+    {"title":"SCARLET WITCH", "price":"5.00", "img":"comic5.jpg"},
+    {"title":"NOVA", "price":"5.00", "img":"comic6.jpg"},
+    {"title":"CAPTAIN MARVEL", "price":"5.00", "img":"comic7.jpg"},
+    {"title":"CAPTAIN AMERICA: SAM WILSON", "price":"5.00", "img":"comic8.jpg"},
+    {"title":"UNCANNY X-MEN", "price":"5.00", "img":"comic9.jpg"},
+    {"title":"UNCANNY AVENGERS", "price":"5.00", "img":"comic10.jpg"},
+    {"title":"A-FORCE", "price":"5.00", "img":"comic11.jpg"}
   ]
 }
