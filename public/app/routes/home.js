@@ -48,7 +48,7 @@ sortAsc = function(property) {
 
 loadComics = function () {
   $.getJSON('../models/comic.json', function(comics) {
-    var sidebar = '<div class="col-lg-3 right"><aside><div class="panel panel-primary myPanel"><div class="panel-footer"><div class="form-group"><input class="form-control" type="text" name="search" placeholder="Search!"></div></div><div class="panel-footer"><button class="btn btn-primary" id ="opcionUno">Order A-Z</button><button class="btn btn-primary" id ="opcionDos">Order Z-A</button></div><div class="panel-footer"><button class="btn btn-primary" id ="opcionTres">Order by rate descending</button><button class="btn btn-primary" id ="opcionCuatro">Order by rate ascending</button></div><div class="panel-footer"><p class="cara">:D</p></div></div></aside></div>';
+    var sidebar = '<div class="col-lg-3 right"><aside><div class="panel panel-primary myPanel"><div class="panel-footer"><div class="form-group"><h3>Order!</h3></div></div><div class="panel-footer"><button class="btn btn-primary" id ="opcionUno">Order A-Z</button><button class="btn btn-primary" id ="opcionDos">Order Z-A</button><button class="btn btn-primary" id ="opcionTres">Order by rate descending</button><button class="btn btn-primary" id ="opcionCuatro">Order by rate ascending</button></div><div class="panel-footer"><p class="cara">:D</p></div></div></aside></div>';
     //Indices
     var i = 0;
     // create mainRow
